@@ -20,8 +20,32 @@ void main() {
     expect(lcm(a, b), equals(144));
   });
 
+
+  // Test GCD
+  // https://www.eolymp.com/ru/blogs/posts/16
   test('GCD of 18 and 48 should be equal to 6', () {
-    var string = '  foo ';
     expect(18.gcd(48), equals(6));
   });
+
+  test('GCD of 1 and 4 should be equal to 1', () {
+    expect(gcd(1, 4), equals(1));
+  });
+
+  test('GCD of 0 and 4 should be equal to 4', () {
+    expect(gcd(0, 4), equals(4));
+  });
+  
+  test('GCD of 0 and 0 should be equal to 0', () {
+    expect(gcd(0, 0), equals(0));
+  });
+
+  // negative numbers
+  test('GCD of 18 and -48 should be equal to 6', () {
+    expect(18.gcd(-48), equals(6));
+  });
+
+  test('GCD of -18 and -48 should be equal to 6', () {
+    expect(18.gcd(-48), equals(6));
+  });
+
 }
